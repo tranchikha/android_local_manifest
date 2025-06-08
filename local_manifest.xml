@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="krpi" fetch="https://github.com/kyndytran" />
+  <remote name="krpi" fetch="https://gitlab.com/zikha-group" />
 
   <project path="device/broadcom/rpi4" name="android_device_broadcom_rpi4" remote="krpi" revision="android14" />
   <project path="device/broadcom/rpi-common" name="android_device_broadcom_rpi-common" remote="krpi" revision="android14" />
