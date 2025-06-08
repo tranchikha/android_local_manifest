@@ -25,9 +25,7 @@
   <project path="vendor/broadcom/hal/gps" name="android_vendor_broadcom_hal_gps" remote="krpi" revision="android14" />
 
   <!-- AOSP -->
-  <remove-project path="frameworks/base" name="platform/frameworks/base"/>
   <remove-project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8"/>
-  <project path="frameworks/base" name="android_frameworks_base" remote="krpi" revision="android-14.0.0_r45" />
   <!--Wi-Fi on Raspberry does not work on latest android-14.0.0_r45-->
   <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="krpi" revision="android-u-beta-1-gpl" />
 </manifest>
