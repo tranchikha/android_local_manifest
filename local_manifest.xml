@@ -24,7 +24,7 @@
   <project path="hardware/interfaces" name="android_hardware_interfaces" remote="krpi" revision="android-14.0.0_r45" />
 
   <!-- HAL -->
-  <project path="vendor/broadcom/hal/usbgadget" name="android_vendor_broadcom_hal_usbgadget" remote="krpi" revision="android14-hidl" />
+  <project path="vendor/broadcom/hal/usbgadget" name="android_vendor_broadcom_hal_usbgadget" remote="krpi" revision="android14" />
   <project path="vendor/broadcom/hal/audio" name="android_vendor_broadcom_hal_audio" remote="krpi" revision="android14" />
   <project path="vendor/broadcom/hal/gps" name="android_vendor_broadcom_hal_gps" remote="krpi" revision="android14" />
 
