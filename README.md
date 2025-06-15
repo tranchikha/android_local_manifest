@@ -1,7 +1,15 @@
+*0. Install required software  (To be updated)*
+* Follow AOSP site and install required software: https://source.android.com/docs/setup/start/requirements#install-packages
+* Install additional software for this build: To be updated
+
 *1. Download and sync source*
 * mkdir -pv <my_working_dir>/mydroid && cd <my_working_dir>/mydroid
 * repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r45 --depth=1
-* curl -o .repo/local_manifests/local_manifest.xml -L https://raw.githubusercontent.com/kyndytran/android_manifest/android14/local_manifest.xml --create-dirs
+* mkdir -pv <my_working_dir>/mydroid/.repo/local_manifests/
+* git clone https://gitlab.com/zikha-group/android_local_manifest/
+* cd android_local_manifest && git checkout android14
+* cp -rf local_manifest.xml <my_working_dir>/mydroid/.repo/local_manifests/
+* cd <my_working_dir>/mydroid
 * repo sync
 
 *2. Tips for saving build time for next build with ccache (only do below steps at the first Android build time)*
