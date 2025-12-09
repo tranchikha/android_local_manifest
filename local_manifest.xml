@@ -9,6 +9,11 @@
   <!--Android u-boot -->
   <project path="external/u-boot" name="android_external_u-boot" remote="krpi" revision="main" />
 
+  <!--Custom scripts for generating Android image -->
+  <project path="vendor/broadcom/boot_scripts" name="boot_scripts" remote="krpi" revision="main" >
+    <linkfile src="gensdimg.sh" dest="gensdimg.sh" />
+  </project>
+
   <!-- Graphics parts -->
   <remove-project path="external/minigbm" name="platform/external/minigbm" />
   <remove-project path="external/mesa3d" name="platform/external/mesa3d" />
