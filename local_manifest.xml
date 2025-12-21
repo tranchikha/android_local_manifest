@@ -29,7 +29,7 @@
   <project path="external/drm_hwcomposer" name="android_external_drm_hwcomposer" remote="krpi" revision="main" />
 
   <remove-project path="hardware/interfaces" name="platform/hardware/interfaces" />
-  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="krpi" revision="android-14.0.0_r45" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="krpi" revision="android-16.0.0_r2" />
 
   <!-- HAL -->
   <project path="vendor/broadcom/hal/usbgadget" name="android_vendor_broadcom_hal_usbgadget" remote="krpi" revision="android14" />
