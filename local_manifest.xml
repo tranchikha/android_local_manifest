@@ -4,7 +4,7 @@
 
   <project path="device/broadcom/rpi4" name="android_device_broadcom_rpi4" remote="krpi" revision="android14" />
   <project path="device/broadcom/rpi-common" name="android_device_broadcom_rpi-common" remote="krpi" revision="android16" />
-  <project path="vendor/broadcom/proprietary" name="android_vendor_broadcom_proprietary" remote="krpi" revision="android14" />
+  <project path="vendor/broadcom/proprietary" name="android_vendor_broadcom_proprietary" remote="krpi" revision="android16" />
 
   <!--Android u-boot -->
   <project path="external/u-boot" name="android_external_u-boot" remote="krpi" revision="main" />
