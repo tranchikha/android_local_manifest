@@ -3,16 +3,22 @@
 * Install additional software for this build: To be updated
 
 *1. Download and sync source*
-* mkdir -pv <my_working_dir>/mydroid && cd <my_working_dir>/mydroid
+* export my_working_dir=$PWD
+* mkdir -pv $my_working_dir/mydroid && cd $my_working_dir/mydroid
 * repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r45 --depth=1
-* mkdir -pv <my_working_dir>/mydroid/.repo/local_manifests/
+* mkdir -pv $my_working_dir/mydroid/.repo/local_manifests/
 * git clone https://gitlab.com/zikha-group/android_local_manifest/
 * cd android_local_manifest && git checkout android14
-* cp -rf local_manifest.xml <my_working_dir>/mydroid/.repo/local_manifests/
-* cd <my_working_dir>/mydroid
+* cp -rf local_manifest.xml $my_working_dir/mydroid/.repo/local_manifests/
+* cd $my_working_dir/mydroid
 * repo sync
 
-*2. Tips for saving build time for next build with ccache (only do below steps at the first Android build time)*
+*2. Build*
+* source build/envsetup.sh
+* lunch rpi4-userdebug
+* make systemimage vendorimage creatbootimg -j8 # Note add NINJA_ARGS="-j1 -l1" to make command and change j8 to j1 if your PC has small RAM
+
+*3. Tips for saving build time for next build with ccache (only do below steps at the first Android build time)*
 * sudo apt-get install -y ccache
 * export USE_CCACHE=1
 * mkdir -pv <my_working_dir>/MYCCACHE_DIR (Create the folder on the disk which has more than 50GB available to use ccache)
@@ -21,7 +27,7 @@
 * ccache -M 50G
 
 
-*3. Tips for building Android 14 AOSP with low RAM PC (my case: RAM 32GB, Swap 30GB, Android AOSP build thread is killed)*
+*4. Tips for building Android 14 AOSP with low RAM PC (my case: RAM 32GB, Swap 30GB, Android AOSP build thread is killed)*
 
 Android AOSP only consumes much memory when performing first build or update *.bp files to create build/soong files.
 
