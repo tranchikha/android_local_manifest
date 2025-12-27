@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="krpi" fetch="https://gitlab.com/zikha-group" />
+  <remote name="github" fetch="https://github.com" />
 
   <project path="device/broadcom/rpi4" name="android_device_broadcom_rpi4" remote="krpi" revision="android14" />
   <project path="device/broadcom/rpi-common" name="android_device_broadcom_rpi-common" remote="krpi" revision="android16" />
@@ -39,4 +40,5 @@
   <!-- AOSP -->
   <remove-project path="build/soong" name="platform/build/soong"/>
   <project path="build/soong" name="android_build_soong" remote="krpi" revision="android-16.0.0_r4" />
+  <project path="vendor/partner_gms" name="lineageos4microg/android_vendor_partner_gms" remote="github" revision="master" />
 </manifest>
