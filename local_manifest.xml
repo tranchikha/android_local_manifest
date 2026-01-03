@@ -42,4 +42,6 @@
   <remove-project path="build/soong" name="platform/build/soong"/>
   <project path="build/soong" name="android_build_soong" remote="krpi" revision="android-16.0.0_r4" />
   <project path="vendor/partner_gms" name="lineageos4microg/android_vendor_partner_gms" remote="github" revision="master" />
+  <!-- Unused repo -->
+  <remove-project path="device/amlogic/yukawa" name="device/amlogic/yukawa" />
 </manifest>
