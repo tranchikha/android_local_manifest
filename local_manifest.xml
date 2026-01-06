@@ -44,4 +44,5 @@
   </project>
   <project path="vendor/partner_gms" name="lineageos4microg/android_vendor_partner_gms" remote="github" revision="master" />
   <project path="external/libdisplay-info" name="platform/external/libdisplay-info" remote="aosp" revision="eb514a595897b3a87fde977c9b0db3794bb17730" />
+  <remove-project path="device/ti/beagle_x15" name="device/ti/beagle-x15" />
 </manifest>
