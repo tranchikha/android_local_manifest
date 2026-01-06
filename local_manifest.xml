@@ -18,7 +18,7 @@
   <!-- Graphics parts -->
   <remove-project path="external/minigbm" name="platform/external/minigbm" />
   <remove-project path="external/mesa3d" name="platform/external/mesa3d" />
-  <project path="external/minigbm" name="android_external_minigbm" remote="krpi" revision="android-14.0.0_r45_minigbm_v1" />
+  <project path="external/minigbm" name="android_external_minigbm" remote="krpi" revision="android-16.0.0_r4" />
   <!-- Mesa upstream latest 25.2.0-devel
     bd7efb88 egl: export GL-CL interop functions from libEGL_mesa.so -->
   <project path="external/mesa3d" name="android_external_mesa3d" remote="krpi" revision="main" />
