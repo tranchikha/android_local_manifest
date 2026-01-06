@@ -2,7 +2,11 @@
 <manifest>
   <remote name="krpi" fetch="https://gitlab.com/zikha-group" />
   <remote name="github" fetch="https://github.com" />
- 
+
+  <remote  name="aosp"
+           fetch=".."
+           review="https://android-review.googlesource.com/" />
+
   <project path="device/broadcom/rpi4" name="android_device_broadcom_rpi4" remote="krpi" revision="android14" />
   <project path="device/broadcom/rpi-common" name="android_device_broadcom_rpi-common" remote="krpi" revision="android14" />
   <project path="vendor/broadcom/proprietary" name="android_vendor_broadcom_proprietary" remote="krpi" revision="android14" />
@@ -39,4 +43,5 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
   <project path="vendor/partner_gms" name="lineageos4microg/android_vendor_partner_gms" remote="github" revision="master" />
+  <project path="external/libdisplay-info" name="platform/external/libdisplay-info" remote="aosp" revision="eb514a595897b3a87fde977c9b0db3794bb17730" />
 </manifest>
