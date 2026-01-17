@@ -1,6 +1,8 @@
 *0. Install required software  (To be updated)*
 * Follow AOSP site and install required software: https://source.android.com/docs/setup/start/requirements#install-packages
-* Install additional software for this build: To be updated
+* Install additional software for this build:
+`sudo pip3 install  meson==1.3.0`
+`sudo apt-get install ninja-build -y`
 
 *1. Download and sync source*
 * export my_working_dir=$PWD
