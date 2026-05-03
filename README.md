@@ -7,7 +7,7 @@
 * mkdir -pv $my_working_dir/mydroid && cd $my_working_dir/mydroid
 * repo init -u https://android.googlesource.com/platform/manifest -b android-16.0.0_r4 --depth=1
 * mkdir -pv $my_working_dir/mydroid/.repo/local_manifests/
-* git clone https://gitlab.com/zikha-group/android_local_manifest/
+* git clone https://github.com/tranchikha/android_local_manifest
 * cd android_local_manifest && git checkout android16
 * cp -rf local_manifest.xml $my_working_dir/mydroid/.repo/local_manifests/
 * cd $my_working_dir/mydroid
