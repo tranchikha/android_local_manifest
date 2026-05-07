@@ -17,7 +17,7 @@
 
   <!-- Graphics parts -->
   <remove-project path="external/minigbm" name="platform/external/minigbm" />
-  <project path="external/minigbm" name="android_external_minigbm" remote="krpi" revision="android-16.0.0_r4" />
+  <project path="external/minigbm" name="android_external_minigbm" remote="krpi" revision="android-17.0.0_r1" />
   <!-- 26.2.0-devel of https://gitlab.freedesktop.org/mesa/mesa -->
   <project path="external/mesa3d-rpi" name="android_external_mesa3d-rpi" remote="krpi" revision="main" />
   <!-- Tools for Generating Android.bp for mesa-rpi -->
@@ -31,7 +31,7 @@
   <project path="external/drm_hwcomposer" name="android_external_drm_hwcomposer" remote="krpi" revision="main" />
 
   <remove-project path="hardware/interfaces" name="platform/hardware/interfaces" />
-  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="krpi" revision="android-16.0.0_r4" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="krpi" revision="android-17.0.0_r1" />
 
   <!-- HAL -->
   <project path="vendor/broadcom/hal/usbgadget" name="android_vendor_broadcom_hal_usbgadget" remote="krpi" revision="android14" />
@@ -41,7 +41,7 @@
 
   <!-- AOSP -->
   <remove-project path="build/soong" name="platform/build/soong"/>
-  <project path="build/soong" name="android_build_soong" remote="krpi" revision="android-16.0.0_r4" >
+  <project path="build/soong" name="android_build_soong" remote="krpi" revision="android-17.0.0_r1" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
