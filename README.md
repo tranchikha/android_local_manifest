@@ -1,6 +1,6 @@
 *0. Install required software  (To be updated)*
 * Follow AOSP site and install required software: https://source.android.com/docs/setup/start/requirements#install-packages
-* Install additional software for this build: To be updated
+* Install additional software for this build: sudo pip3 install --upgrade meson ninja mako PyYAML
 
 *1. Download and sync source*
 * export my_working_dir=$PWD
@@ -15,7 +15,7 @@
 
 *2. Build*
 * source build/envsetup.sh
-* lunch rpi4-bp2a-userdebug
+* lunch rpi4_atablet-bp2a-userdebug
 * make systemimage vendorimage creatbootimg -j8 # Note add NINJA_ARGS="-j1 -l1" to make command and change j8 to j1 if your PC has small RAM
 
 *2. Tips for saving build time for next build with ccache (only do below steps at the first Android build time)*
