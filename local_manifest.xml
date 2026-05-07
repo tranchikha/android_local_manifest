@@ -27,7 +27,7 @@
   <!-- Display HAL -->
   <remove-project path="external/drm_hwcomposer" name="platform/external/drm_hwcomposer" />
   <!-- drm-hwcomposer upstream latest
-    6f1f89a2 drm_hwcomposer: Handle empty damage vector -->
+    84f5b1692 Move refresh rate change logging -->
   <project path="external/drm_hwcomposer" name="android_external_drm_hwcomposer" remote="krpi" revision="main" />
 
   <remove-project path="hardware/interfaces" name="platform/hardware/interfaces" />
