@@ -1,22 +1,22 @@
 *0. Install required software  (To be updated)*
 * Follow AOSP site and install required software: https://source.android.com/docs/setup/start/requirements#install-packages
-* Install additional software for this build: To be updated
+* Install additional software for this build: sudo pip3 install --upgrade meson ninja mako PyYAML
 
 *1. Download and sync source*
 * export my_working_dir=$PWD
 * mkdir -pv $my_working_dir/mydroid && cd $my_working_dir/mydroid
-* repo init -u https://android.googlesource.com/platform/manifest -b android-16.0.0_r4 --depth=1
+* repo init -u https://android.googlesource.com/platform/manifest -b android-17.0.0_r1 --depth=1
 * mkdir -pv $my_working_dir/mydroid/.repo/local_manifests/
 * git clone https://github.com/tranchikha/android_local_manifest
-* cd android_local_manifest && git checkout android16
+* cd android_local_manifest && git checkout android17
 * cp -rf local_manifest.xml $my_working_dir/mydroid/.repo/local_manifests/
 * cd $my_working_dir/mydroid
 * repo sync
 
 *2. Build*
 * source build/envsetup.sh
-* lunch rpi4-bp2a-userdebug
-* make systemimage vendorimage creatbootimg -j8 # Note add NINJA_ARGS="-j1 -l1" to make command and change j8 to j1 if your PC has small RAM
+* lunch rpi4_atablet-cp31-userdebug
+* make systemimage vendorimage creatbootimg -j8 # Note: Change j8 to j1 if your PC has small RAM
 
 *2. Tips for saving build time for next build with ccache (only do below steps at the first Android build time)*
 * sudo apt-get install -y ccache
