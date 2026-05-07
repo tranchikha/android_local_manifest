@@ -18,6 +18,11 @@
   <!-- Graphics parts -->
   <remove-project path="external/minigbm" name="platform/external/minigbm" />
   <project path="external/minigbm" name="android_external_minigbm" remote="krpi" revision="android-16.0.0_r4" />
+  <!-- 26.2.0-devel of https://gitlab.freedesktop.org/mesa/mesa -->
+  <project path="external/mesa3d-rpi" name="android_external_mesa3d-rpi" remote="krpi" revision="main" />
+  <!-- Tools for Generating Android.bp for mesa-rpi -->
+  <remove-project name="platform/external/rust/ninja-to-soong" />
+  <project path="external/rust/ninja-to-soong" name="android_external_rust_ninja-to-soong" remote="krpi" revision="android-16.0" />
 
   <!-- Display HAL -->
   <remove-project path="external/drm_hwcomposer" name="platform/external/drm_hwcomposer" />
