@@ -50,4 +50,6 @@
   <project path="vendor/partner_gms" name="lineageos4microg/android_vendor_partner_gms" remote="github" revision="master" />
   <!-- Unused repo -->
   <remove-project path="device/amlogic/yukawa" name="device/amlogic/yukawa" />
+  <remove-project path="packages/modules/Bluetooth" name="platform/packages/modules/Bluetooth" />
+  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" remote="krpi" revision="android-17.0.0_r1" />
 </manifest>
