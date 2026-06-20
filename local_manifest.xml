@@ -45,6 +45,8 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+  <remove-project path="frameworks/native" name="platform/frameworks/native" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="krpi" revision="android-17.0.0_r1" />
   <project path="vendor/partner_gms" name="lineageos4microg/android_vendor_partner_gms" remote="github" revision="master" />
   <!-- Unused repo -->
   <remove-project path="device/amlogic/yukawa" name="device/amlogic/yukawa" />
