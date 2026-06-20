@@ -6,16 +6,13 @@
 * export my_working_dir=$PWD
 * mkdir -pv $my_working_dir/mydroid && cd $my_working_dir/mydroid
 * repo init -u https://android.googlesource.com/platform/manifest -b android-17.0.0_r1 --depth=1
-* mkdir -pv $my_working_dir/mydroid/.repo/local_manifests/
-* git clone https://github.com/tranchikha/android_local_manifest
-* cd android_local_manifest && git checkout android17
-* cp -rf local_manifest.xml $my_working_dir/mydroid/.repo/local_manifests/
+* curl -o .repo/local_manifests/local_manifest.xml -L https://raw.githubusercontent.com/tranchikha/android_local_manifest/refs/heads/android17/local_manifest.xml --create-dirs
 * cd $my_working_dir/mydroid
 * repo sync
 
 *2. Build*
 * source build/envsetup.sh
-* lunch rpi4_atablet-cp31-userdebug
+* lunch rpi4_atablet-cp2a-userdebug
 * make systemimage vendorimage creatbootimg -j8 # Note: Change j8 to j1 if your PC has small RAM
 
 *2. Tips for saving build time for next build with ccache (only do below steps at the first Android build time)*
@@ -31,6 +28,6 @@
 
 Android AOSP only consumes much memory when performing first build or update *.bp files to create build/soong files.
 
-1. Increase swap from 30 GB to 50GB. Refer: https://askubuntu.com/questions/178712/how-to-increase-swap-space (Use sudo)
+1. Increase swap from 30 GB to 50GB (recommended for PC with 32GB RAM, swap 48GB). Refer: https://askubuntu.com/questions/178712/how-to-increase-swap-space (Use sudo)
 2. Change heap configuration to metalava. Refer: https://github.com/verNANDo57/android_build_soong/commit/ffc8846a01fcfc20d6cf8ca701ef73d99f15acad
 3. Set Java heap (put to ~/.bashrc. So that you don't need to re-run next time): export _JAVA_OPTIONS="-Xmx16g"
